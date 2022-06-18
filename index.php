@@ -21,7 +21,6 @@
     <h5 class="center">INICIA SESIÓN</h5>
 
 
-
     <div class="row">
       <form class="col s12" action="procesarUsuario.php" method="POST">
 
@@ -141,6 +140,7 @@ button.onclick = function(){
     <li><a class="waves-effect" href="viajes.php"><i class="material-icons">airport_shuttle</i>Viajes</a></li>
     <li><a href="#modalRegistro" class="modal-trigger waves-effect"><i class="material-icons">add_circle_outline</i>Regístrarse</a></li>
     <li><a href="#modalInicio" class="modal-trigger waves-effect"><i class="material-icons">contact_mail</i>Iniciar sesión</a></li>
+    <li><a href="" class="waves-effect"><i class="material-icons">help</i>Ayuda</a></li>
 
 
   </ul>
