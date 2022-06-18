@@ -18,11 +18,14 @@
 </head>
 
 <!--opciones de menú "hamburguesa responsive"-->
-<ul class="sidenav" id="menu-responsive">
-  <li><a href="">Viajes</a></li>
-  <li><a href="">Perfil</a></li>
-  <li><a href="">Ayuda</a></li>
-  <li><a href="salir.php">Salir</a></li>
+<ul id="slide-out" class="sidenav">
+    <li><div class="user-view">
+      <a href="#user"><i class="material-icons">person</i></a>
+      <a href="#name"><span class="black-text name">Usuario</span></a>
+      <a href="#email"><span class="black-text email">ejemplo@correo.com</span></a>
+    </div></li>
+    <li><a class="waves-effect" href="viajes.php"><i class="material-icons">airport_shuttle</i>Viajes</a></li>
+    <li><a href="" class="waves-effect"><i class="material-icons">help</i>Ayuda</a></li>
 </ul>
 
 <body>
@@ -34,7 +37,7 @@
       </a>
 
       <!--Menú responsive-->
-      <a href="#" data-target="menu-responsive" class="sidenav-trigger left">
+      <a href="#" data-target="slide-out" class="sidenav-trigger">
         <i class="material-icons">menu</i>
       </a>
       <!--opciones del menúx-->
