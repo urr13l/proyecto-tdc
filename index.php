@@ -142,7 +142,6 @@ button.onclick = function(){
     <li><a href="#modalInicio" class="modal-trigger waves-effect"><i class="material-icons">contact_mail</i>Iniciar sesión</a></li>
     <li><a href="" class="waves-effect"><i class="material-icons">help</i>Ayuda</a></li>
 
-
   </ul>
 
 <body>
