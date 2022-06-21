@@ -5,6 +5,11 @@ document.addEventListener('DOMContentLoaded', function() {
   var sidevarInicio = document.querySelectorAll('.sidenav');
   var select = document.querySelectorAll('select');
   var datePicker = document.querySelectorAll('.datepicker');
+  var dropdownPerfil = document.querySelectorAll('#tiggerPerfil');
+  var dropdownViajes = document.querySelectorAll('#tiggerViajes');
+  var dropdownUrvan = document.querySelectorAll('#tiggerUrvan');
+  var dropdownConductor = document.querySelectorAll('#tiggerConductor');
+  var dropdownAdministrador = document.querySelectorAll('#tiggerAdministrador');
 
 
   var instances = M.Modal.init(elems);
@@ -35,6 +40,37 @@ document.addEventListener('DOMContentLoaded', function() {
       weekdaysAbbrev: ['L', 'M', 'MM', 'J', 'V', 'S', 'D']
     }
   });
+
+  var instanciaDropViajes = M.Dropdown.init(dropdownViajes, {
+    coverTrigger: false,
+    hover: true,
+    inDuration: 160,
+    outDuration: 500
+  });
+
+  var instanciaDropUrvan = M.Dropdown.init(dropdownUrvan, {
+    coverTrigger: false,
+    hover: true,
+    inDuration: 160,
+    outDuration: 500
+  });
+
+  var instanciaDropConductor = M.Dropdown.init(dropdownAdministrador, {
+    coverTrigger: false,
+    hover: true,
+    inDuration: 160,
+    outDuration: 500
+  });
+
+  var instanciaDropAdministrador = M.Dropdown.init(dropdownConductor, {
+    coverTrigger: false,
+    hover: true,
+    inDuration: 160,
+    outDuration: 500
+  });
+
+  var elems3 = document.querySelectorAll('.carousel');
+  var instances3 = M.Carousel.init(elems3);
     
 });
 

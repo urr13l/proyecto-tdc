@@ -19,12 +19,23 @@
 
 <!--opciones de menú "hamburguesa responsive"-->
 <ul class="sidenav" id="menu-responsive">
-  <li><a href="">Viajes</a></li>
-  <li><a href="">Perfil</a></li>
-  <li><a href="">Ayuda</a></li>
+  <!-- <li><a class='dropdown-trigger btn' href='#' data-target='dropdown6'>Viajes</a></li> -->
+  <li><a href="">Viajes </a></li>
+  <li><a href="">Urvan </a></li>
+  <li><a href="">Conductor</a></li>
+  <li><a href="">Administrador</a></li>
   <li><a href="salir.php">Salir</a></li>
 </ul>
 
+<!-- <ul id='dropdown6' class='dropdown-content'>
+    <li><a href="#!">one</a></li>
+    <li><a href="#!">two</a></li>
+    <li class="divider" tabindex="-1"></li>
+    <li><a href="#!">three</a></li>
+    <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+    <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+  </ul>
+   -->
 <body>
   <!--Menú (nav)-->
   <nav class="light-blue darken-4">
@@ -40,15 +51,33 @@
       <!--opciones del menúx-->
       <ul class="right hide-on-med-and-down">
         <li>
-          <a href="#">Viajes</a>
+          <a class="dropdown-trigger" id="tiggerViajes" data-target="dropdown2">
+            Viajes
+            <i class="material-icons right">arrow_drop_down</i>
+          </a>
         </li>
         <li>
-          <a href="">Ayuda</a>
+          <a class="dropdown-trigger" id="tiggerUrvan" data-target="dropdown3">
+            Urvan                
+            <i class="material-icons right">arrow_drop_down</i>
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-trigger" id="tiggerConductor" data-target="dropdown4">
+            Conductor
+            <i class="material-icons right">arrow_drop_down</i>
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-trigger" id="tiggerAdministrador" data-target="dropdown5">
+            Administrador
+            <i class="material-icons right">arrow_drop_down</i>
+          </a>
         </li>
         <li>
           <a class="dropdown-trigger" id="tiggerPerfil" data-target="dropdown1">
             <i class="material-icons left">insert_emoticon</i> 
-            <?php @session_start(); echo $_SESSION['usuarioactua']; ?>
+            <?php @session_start(); echo $_SESSION['usuarioactua'];?>
             <i class="material-icons right">arrow_drop_down</i>
           </a>
         </li>
@@ -58,11 +87,41 @@
   </nav>
 
   <ul id="dropdown1" class="dropdown-content">
-  <li><a href="perfil.php">Ver tu perfil</a></li>
+    <li><a href="perfil.php">Ver tu perfil</a></li>
     <li class="divider"></li>
     <li><a href="perfil.php">Editar perfil</a></li>
     <li class="divider"></li> 
     <li><a href="salir.php">Salir</a></li>
+  </ul>
+
+  <ul id="dropdown2" class="dropdown-content">
+    <li><a href="#">Crear</a></li>
+    <li class="divider"></li>
+    <li><a href="#">Eliminar</a></li>
+    <li class="divider"></li>
+    <li><a href="#">Actualizar</a></li>
+  </ul>
+
+  <ul id="dropdown3" class="dropdown-content">
+    <li><a href="#">Nueva</a></li>
+    <li class="divider"></li>
+    <li><a href="#">Disponibilidad</a></li>
+  </ul>
+
+  <ul id="dropdown4" class="dropdown-content">
+    <li><a href="#">Nuevo</a></li>
+    <li class="divider"></li>
+    <li><a href="#">Baja</a></li>
+    <li class="divider"></li>
+    <li><a href="#">Actualizar</a></li>
+  </ul>
+
+  <ul id="dropdown5" class="dropdown-content">
+    <li><a href="#">Nuevo</a></li>
+    <li class="divider"></li>
+    <li><a href="#">Baja</a></li>
+    <li class="divider"></li>
+    <li><a href="#">Actualizar</a></li>
   </ul>
 
   <!--Contenido principal de la pagina web
@@ -70,17 +129,6 @@
       -->
   <article>
     <section>
-      lorenskdfbdjbhf<br>
-      swkdfjgdskjfgksjdgf<br>
-      sdkjfgsdkjfg<br>
-      lorenskdfbdjbhf<br>
-      swkdfjgdskjfgksjdgf<br>
-      sdkjfgsdkjfg<br>
-      lorenskdfbdjbhf<br>
-      swkdfjgdskjfgksjdgf<br>
-      sdkjfgsdkjfg<br>
-      lorenskdfbdjbhf<br>
-      swkdfjgdskjfgksjdgf<br>
       sdkjfgsdkjfg<br>
     </section>
   </article>
@@ -100,7 +148,7 @@
           <h5 class="white-text">Redes sociales</h5>
           <p class="grey-text text-lighten-4">
             <i class="small material-icons">language</i>
-            Facebook
+            <a class="grey-text text-lighten-3" href="https://www.facebook.com/TDC-102310959199125">  Facebook</a>
           </p>
         </div>
       </div>
