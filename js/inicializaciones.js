@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
   var dropdownConductor = document.querySelectorAll('#tiggerConductor');
   var dropdownAdministrador = document.querySelectorAll('#tiggerAdministrador');
 
+  var modal2 = document.querySelectorAll('#modal2');
+  var instances2 = M.Modal.init(modal2);
 
   var instances = M.Modal.init(elems);
   var instanciaInicio = M.Modal.init(modalInicio);
@@ -76,5 +78,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var elems4 = document.querySelectorAll('#menu-responsive');
   var instances4 = M.Collapsible.init(elems4);
+
+  var elems5 = document.querySelectorAll('.slider');
+    var instances5 = M.Slider.init(elems5);
+
+    var combobox = document.querySelectorAll('select');
+    var instances6 = M.FormSelect.init(combobox);
     
 });

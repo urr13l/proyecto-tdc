@@ -71,6 +71,9 @@
 
         include("conexion_bd.php");
 
+        //$consulta_idUrvan = mysqli_query($conexion,"SELECT c_id_urvan WHERE");
+        //include("comprarBoleto.php");
+
         $consulta_query = mysqli_query($conexion, "SELECT * FROM urvan WHERE c_id_urvan = 1") or die("No se pudo realizar la consulta");
         if (mysqli_num_rows($consulta_query) > 0) {
           while ($fila = mysqli_fetch_array($consulta_query)) {

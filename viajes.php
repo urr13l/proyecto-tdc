@@ -48,6 +48,14 @@
     </div>
   </nav>
 
+   <!--opciones de menú "hamburguesa responsive"-->
+   <ul class="sidenav" id="menu-responsive">
+    <li><a href="">Viajes</a></li>
+    <li><a href="">Perfil</a></li>
+    <li><a href="">Ayuda</a></li>
+    <li><a href="index.php">Salir</a></li>
+    </ul>
+
   <article>
     <section>
       <br>
@@ -59,31 +67,25 @@
             <div class="row">
 
               <div class="input-field col s12 m6 l4">
-                <select>
+                <select id="selectOrigen">
                   <option value="0" disabled selected>Desde donde viaja</option>
                   <option value="1">Puerto Escondido</option>
-                  <option value="2">Oaxaca capital</option>
-                  <option value="3">Huatulco</option>
-                  <option value="4">Pinotepa</option>
-                  <option value="5">San gabriel</option>
+                  <option value="2">Oaxaca</option>
                 </select>
                 <label>Origen</label>
               </div>
-
+              <!-- posible cambio
               <div class="input-field col s12 m6 l4">
                 <select name="selectViaje">
                   <option value="sn" disabled selected>Hacia donde viaja</option>
                   <option value="Puerto Escondido">Puerto Escondido</option>
                   <option value="Oaxaca capital">Oaxaca capital</option>
-                  <option value="Huatulco">Huatulco</option>
-                  <option value="Pinotepa">Pinotepa</option>
-                  <option value="San gabriel">San gabriel</option>
                 </select>
                 <label>Destino</label>
               </div>
-
+              -->
               <div class="input-field col s2 m2 l2">
-                <button class="btn waves-effect waves-light light-blue darken-4" type="submit" name="buscarViaje">
+                <button class="btn light-blue darken-4" type="button" name="buscarViaje" id="btnBuscarViaje">
                   Buscar viaje
                 </button>
               </div>
@@ -96,30 +98,45 @@
     </section>
   </article>
 
+  <article>
+    <section>
+      <div class="row">
+        <div class="container" id="respuestaConsulta">
 
-  <?php
-    if(isset($_POST['buscarViaje'])) {
-      $destinoViaje = $_POST['selectViaje'];
-      if ($destinoViaje == "Puerto Escondido") {
-        echo "<script> window.location.href = \"disponibilidadViaje.php\"</script> </script>";
-      } else {
-        echo "<script> alert(' Sin destino '); </script>";
-      }
+        </div>
+      </div>
+    </section>
+  </article>
+
+
+  <script>
+    var seleccion = document.getElementById('selectOrigen');
+
+    var botonEnviar = document.getElementById('btnBuscarViaje');
+    botonEnviar.onclick = pasarjAax;
+
+    function pasarjAax() {
+      var opcion = seleccion.options[seleccion.selectedIndex].text;
+      var ruta = "seleccion=" + opcion;
+
+      $.ajax({
+        url: 'buscarViaje.php',
+        type: 'POST',
+        data: ruta
+      }).done(function(res) {
+        $('#respuestaConsulta').html(res)
+      }).fail(function() {
+        console.log("Error");
+      }).always(function() {
+        console.log("complete");
+      });
     }
-  ?>
-
-  <!--opciones de menú "hamburguesa responsive"-->
-  <ul class="sidenav" id="menu-responsive">
-    <li><a href="">Viajes</a></li>
-    <li><a href="">Perfil</a></li>
-    <li><a href="">Ayuda</a></li>
-    <li><a href="index.php">Salir</a></li>
-  </ul>
-
+  </script>
 
   <script type="text/javascript" src="js/inicializaciones.js"></script>
   <script type="text/javascript" src="js/materialize.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
 
 </body>
 
