@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('#modalRegistro');
   var modalInicio = document.querySelectorAll('#modalInicio');
@@ -41,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+
   var instanciaDropViajes = M.Dropdown.init(dropdownViajes, {
     coverTrigger: false,
     hover: true,
@@ -71,6 +73,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var elems3 = document.querySelectorAll('.carousel');
   var instances3 = M.Carousel.init(elems3);
+
+  var elems4 = document.querySelectorAll('#menu-responsive');
+  var instances4 = M.Collapsible.init(elems4);
     
 });
-

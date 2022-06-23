@@ -1,5 +1,5 @@
 <?php
-  include("seguridad.php");
+include("seguridad.php");
 ?>
 
 <!DOCTYPE html>
@@ -18,13 +18,31 @@
 </head>
 
 <!--opciones de menú "hamburguesa responsive"-->
-<ul class="sidenav" id="menu-responsive">
+<ul class="sidenav collapsible" id="menu-responsive">
   <!-- <li><a class='dropdown-trigger btn' href='#' data-target='dropdown6'>Viajes</a></li> -->
-  <li><a href="">Viajes </a></li>
-  <li><a href="">Urvan </a></li>
-  <li><a href="">Conductor</a></li>
-  <li><a href="">Administrador</a></li>
-  <li><a href="salir.php">Salir</a></li>
+  <li>
+    <div class="collapsible-header"><i class="material-icons">airport_shuttle</i>Viajes</div>
+    <div class="collapsible-body">
+      <ul>
+        <li><a href="">Crear viajes</a></li>
+        <li><a href="">Eliminar viajes</a></li>
+        <li><a href="">Actualizar viajes</a></li>
+      </ul>
+    </div>
+  </li>
+
+  <li>
+    <div class="collapsible-header"><i class="material-icons">airport_shuttle</i>Urban</div>
+    <div class="collapsible-body">
+      <ul>
+        <li><a href="">Nueva viajes</a></li>
+        <li><a href="">Disponibilidad viajes</a></li>
+      </ul>
+    </div>
+  </li>
+
+</ul>
+
 </ul>
 
 <!-- <ul id='dropdown6' class='dropdown-content'>
@@ -36,6 +54,7 @@
     <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
   </ul>
    -->
+
 <body>
   <!--Menú (nav)-->
   <nav class="light-blue darken-4">
@@ -58,7 +77,7 @@
         </li>
         <li>
           <a class="dropdown-trigger" id="tiggerUrvan" data-target="dropdown3">
-            Urvan                
+            Urvan
             <i class="material-icons right">arrow_drop_down</i>
           </a>
         </li>
@@ -76,52 +95,45 @@
         </li>
         <li>
           <a class="dropdown-trigger" id="tiggerPerfil" data-target="dropdown1">
-            <i class="material-icons left">insert_emoticon</i> 
-            <?php @session_start(); echo $_SESSION['usuarioactua'];?>
+            <i class="material-icons left">insert_emoticon</i>
+            <?php @session_start();
+            echo $_SESSION['usuarioactua']; ?>
             <i class="material-icons right">arrow_drop_down</i>
           </a>
         </li>
       </ul>
-      
+
     </div>
   </nav>
 
   <ul id="dropdown1" class="dropdown-content">
-    <li><a href="perfil.php">Ver tu perfil</a></li>
+    <li><a href="perfil.php" class="black-text">Ver tu perfil</a></li>
+    <li><a href="perfil.php" class="black-text">Editar perfil</a></li>
     <li class="divider"></li>
-    <li><a href="perfil.php">Editar perfil</a></li>
-    <li class="divider"></li> 
-    <li><a href="salir.php">Salir</a></li>
+    <li><a href="salir.php" class="black-text">Salir</a></li>
   </ul>
 
   <ul id="dropdown2" class="dropdown-content">
-    <li><a href="#">Crear</a></li>
-    <li class="divider"></li>
-    <li><a href="#">Eliminar</a></li>
-    <li class="divider"></li>
-    <li><a href="#">Actualizar</a></li>
+    <li><a href="#" class="black-text">Crear</a></li>
+    <li><a href="#" class="black-text">Eliminar</a></li>
+    <li><a href="#" class="black-text">Actualizar</a></li>
   </ul>
 
   <ul id="dropdown3" class="dropdown-content">
-    <li><a href="#">Nueva</a></li>
-    <li class="divider"></li>
-    <li><a href="#">Disponibilidad</a></li>
+    <li><a href="#" class="black-text">Nueva</a></li>
+    <li><a href="#" class="black-text">Disponibilidad</a></li>
   </ul>
 
   <ul id="dropdown4" class="dropdown-content">
-    <li><a href="#">Nuevo</a></li>
-    <li class="divider"></li>
-    <li><a href="#">Baja</a></li>
-    <li class="divider"></li>
-    <li><a href="#">Actualizar</a></li>
+    <li><a href="#" class="black-text">Nuevo</a></li>
+    <li><a href="#" class="black-text">Baja</a></li>
+    <li><a href="#" class="black-text">Actualizar</a></li>
   </ul>
 
   <ul id="dropdown5" class="dropdown-content">
-    <li><a href="#">Nuevo</a></li>
-    <li class="divider"></li>
-    <li><a href="#">Baja</a></li>
-    <li class="divider"></li>
-    <li><a href="#">Actualizar</a></li>
+    <li><a href="#" class="black-text">Nuevo</a></li>
+    <li><a href="#" class="black-text">Baja</a></li>
+    <li><a href="#" class="black-text">Actualizar</a></li>
   </ul>
 
   <!--Contenido principal de la pagina web
@@ -148,7 +160,7 @@
           <h5 class="white-text">Redes sociales</h5>
           <p class="grey-text text-lighten-4">
             <i class="small material-icons">language</i>
-            <a class="grey-text text-lighten-3" href="https://www.facebook.com/TDC-102310959199125">  Facebook</a>
+            <a class="grey-text text-lighten-3" href="https://www.facebook.com/TDC-102310959199125"> Facebook</a>
           </p>
         </div>
       </div>

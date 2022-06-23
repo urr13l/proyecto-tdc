@@ -54,45 +54,85 @@
         <div class="col s8 m8 l8">
 
           <h4 class="center">Horario y precios de ida</h4>
+
           <div class="row">
-            <div class="col s9 m9 l12">
+            <div class="col s3 m3 l3"></div>
+            <div class="col s9 m9 l6">
               <div class="card-panel light-blue accent-1 hoverable center-align">
                 <span class="black-text ">
-                  PUERTO ESCONDIDO
+                  PUERTO ESCONDIDO - HUATULCO
                 </span>
+                <br>
+                <p>Salida: 5:00 A.M.</p>
+                <br>
+                <button onclick="window.location.href = 'seleccionarAsiento.php'" class="btn waves-light black-text" type="button" name="action">Comprar
+                </button>
               </div>
             </div>
+            <div class="col s3 m3 l3"></div>
           </div>
 
           <div class="row">
-            <div class="col s9 m9 l12">
+            <div class="col s3 m3 l3"></div>
+            <div class="col s9 m9 l6">
               <div class="card-panel light-blue accent-1 hoverable center-align">
                 <span class="black-text ">
-                  OAXACA CAPITAL
+                  PUERTO ESCONDIDO - HUATULCO
                 </span>
+                <br>
+                <p>Salida: 9:00 A.M.</p>
+                <br>
+                <button onclick="window.location.href = 'seleccionarAsiento.php'" class="btn waves-light black-text" type="button" name="action">Comprar
+                </button>
               </div>
             </div>
+            <div class="col s3 m3 l3"></div>
           </div>
 
           <div class="row">
-            <div class="col s9 m9 l12">
+            <div class="col s3 m3 l3"></div>
+            <div class="col s9 m9 l6">
               <div class="card-panel light-blue accent-1 hoverable center-align">
                 <span class="black-text ">
-                  HUATULCO
+                  PUERTO ESCONDIDO - HUATULCO
                 </span>
+                <br>
+                <p>Salida: 12:00 A.M.</p>
+                <br>
+                <button onclick="window.location.href = 'seleccionarAsiento.php'" class="btn waves-light black-text" type="button" name="action">Comprar
+                </button>
               </div>
             </div>
+            <div class="col s3 m3 l3"></div>
+          </div>
+
+          <div class="row">
+            <div class="col s3 m3 l3"></div>
+            <div class="col s9 m9 l6">
+              <div class="card-panel light-blue accent-1 hoverable center-align">
+                <span class="black-text ">
+                  PUERTO ESCONDIDO - HUATULCO
+                </span>
+                <br>
+                <p>Salida: 1:00 A.M.</p>
+                <br>
+                <button onclick="window.location.href = 'seleccionarAsiento.php'" class="btn waves-light black-text" type="button" name="action">Comprar
+                </button>
+              </div>
+            </div>
+            <div class="col s3 m3 l3"></div>
           </div>
 
         </div>
 
+
         <div class="col s4 m4 l4">
-        <br>
-        <h6 class="center">Boleto a puerto escondido</h6>
-        
+          <br>
+          <h6 class="center">Boleto a puerto escondido</h6>
+
           <div class="row">
             <div class="col s12 m12 l12">
-              
+
             </div>
           </div>
         </div>

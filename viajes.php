@@ -1,3 +1,6 @@
+<?php
+  include("seguridad.php");
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -54,32 +57,8 @@
           <h6>¿A donde te vamos a llevar?</h6>
           <form method="POST">
             <div class="row">
-              <div class="input-field col s4 m2 l2">
-                <select>
-                  <option value="1">Ida</option>
-                  <option value="2">Ida y vuelta</option>
-                </select>
-              </div>
 
-              <div class="input-field col s2 m1 l1">
-                <input id="selectAdultos" type="number" class="validate">
-                <label for="selectAdultos">Adulto(s)</label>
-              </div>
-
-              <div class="input-field col s2 m1 l1">
-                <input id="selectMenores" type="number" class="validate">
-                <label for="selectMenores">Niño(s)</label>
-              </div>
-
-              <div class="input-field col s2 m1 l1">
-                <input id="selectInapam" type="number" class="validate">
-                <label for="selectInapam">INAPAM</label>
-              </div>
-            </div>
-
-            <div class="row">
-
-              <div class="input-field col s3">
+              <div class="input-field col s12 m6 l4">
                 <select>
                   <option value="0" disabled selected>Desde donde viaja</option>
                   <option value="1">Puerto Escondido</option>
@@ -91,9 +70,9 @@
                 <label>Origen</label>
               </div>
 
-              <div class="input-field col s3">
+              <div class="input-field col s12 m6 l4">
                 <select name="selectViaje">
-                  <option value="0" disabled selected>Hacia donde viaja</option>
+                  <option value="sn" disabled selected>Hacia donde viaja</option>
                   <option value="Puerto Escondido">Puerto Escondido</option>
                   <option value="Oaxaca capital">Oaxaca capital</option>
                   <option value="Huatulco">Huatulco</option>
@@ -103,12 +82,7 @@
                 <label>Destino</label>
               </div>
 
-              <div class="input-field col s3">
-                <input type="text" class="datepicker" id="fechaViaje">
-                <label for="fechaViaje">Fecha de salida</label>
-              </div>
-
-              <div class="input-field col s3">
+              <div class="input-field col s2 m2 l2">
                 <button class="btn waves-effect waves-light light-blue darken-4" type="submit" name="buscarViaje">
                   Buscar viaje
                 </button>
@@ -126,7 +100,6 @@
   <?php
     if(isset($_POST['buscarViaje'])) {
       $destinoViaje = $_POST['selectViaje'];
-
       if ($destinoViaje == "Puerto Escondido") {
         echo "<script> window.location.href = \"disponibilidadViaje.php\"</script> </script>";
       } else {

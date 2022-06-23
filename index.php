@@ -137,7 +137,7 @@ button.onclick = function(){
       <a href="#name"><span class="black-text name">Usuario</span></a>
       <a href="#email"><span class="black-text email">ejemplo@correo.com</span></a>
     </div></li>
-    <li><a class="waves-effect" href="viajes.php"><i class="material-icons">airport_shuttle</i>Viajes</a></li>
+    <li><a href="#modalInicio" class="modal-trigger waves-effect"><i class="material-icons">airport_shuttle</i>Viajes</a></li>
     <li><a href="#modalRegistro" class="modal-trigger waves-effect"><i class="material-icons">add_circle_outline</i>Regístrarse</a></li>
     <li><a href="#modalInicio" class="modal-trigger waves-effect"><i class="material-icons">contact_mail</i>Iniciar sesión</a></li>
     <li><a href="" class="waves-effect"><i class="material-icons">help</i>Ayuda</a></li>
@@ -157,7 +157,7 @@ button.onclick = function(){
       <!--opciones del menúx-->
       <ul class="right hide-on-med-and-down">
         <li>
-          <a href="viajes.php">Viajes</a>
+          <a href="#modalInicio" class="modal-trigger">Viajes</a>
         </li>
         <li>
           <a href="#modalRegistro" class="modal-trigger">Regístrarse</a>

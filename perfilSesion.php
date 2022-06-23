@@ -1,5 +1,5 @@
 <?php
-  include("seguridad.php");
+include("seguridad.php");
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +19,7 @@
 
 <!--opciones de menú "hamburguesa responsive"-->
 <ul class="sidenav" id="menu-responsive">
-  <li><a href="">Viajes</a></li>
+  <li><a href="viajes.php">Viajes</a></li>
   <li><a href="">Perfil</a></li>
   <li><a href="">Ayuda</a></li>
   <li><a href="salir.php">Salir</a></li>
@@ -40,29 +40,30 @@
       <!--opciones del menúx-->
       <ul class="right hide-on-med-and-down">
         <li>
-          <a href="#">Viajes</a>
+          <a href="viajes.php">Viajes</a>
         </li>
         <li>
           <a href="">Ayuda</a>
         </li>
         <li>
           <a class="dropdown-trigger" id="tiggerPerfil" data-target="dropdown1">
-            <i class="material-icons left">insert_emoticon</i> 
-            <?php @session_start(); echo $_SESSION['usuarioactua']; ?>
+            <i class="material-icons left">insert_emoticon</i>
+            <?php @session_start();
+            echo $_SESSION['usuarioactua']; ?>
             <i class="material-icons right">arrow_drop_down</i>
           </a>
         </li>
       </ul>
-      
+
     </div>
   </nav>
 
-  <ul id="dropdown1" class="dropdown-content">
-  <li><a href="perfil.php">Ver tu perfil</a></li>
-    <li class="divider"></li>
-    <li><a href="perfil.php">Editar perfil</a></li>
-    <li class="divider"></li> 
-    <li><a href="salir.php">Salir</a></li>
+  <ul id="dropdown1" class="dropdown-content ">
+    <li><a href="perfil.php" class="black-text">Ver tu perfil</a></li>
+    <li class="divider" class="black-text"></li>
+    <li><a href="perfil.php" class="black-text">Editar perfil</a></li>
+    <li class="divider" class="black-text"></li>
+    <li><a href="salir.php" class="black-text">Salir</a></li>
   </ul>
 
   <!--Contenido principal de la pagina web
