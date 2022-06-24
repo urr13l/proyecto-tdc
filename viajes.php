@@ -63,14 +63,14 @@
         <div class="container">
           <br>
           <h6>¿A donde te vamos a llevar?</h6>
-          <form method="POST">
+          <form method="POST" action="buscarViaje.php">
             <div class="row">
 
               <div class="input-field col s12 m6 l4">
-                <select id="selectOrigen">
+                <select id="selectOrigen" name="selectViaje">
                   <option value="0" disabled selected>Desde donde viaja</option>
-                  <option value="1">Puerto Escondido</option>
-                  <option value="2">Oaxaca</option>
+                  <option value="Puerto Escondido">Puerto Escondido</option>
+                  <option value="Oaxaca">Oaxaca</option>
                 </select>
                 <label>Origen</label>
               </div>
@@ -85,7 +85,7 @@
               </div>
               -->
               <div class="input-field col s2 m2 l2">
-                <button class="btn light-blue darken-4" type="button" name="buscarViaje" id="btnBuscarViaje">
+                <button class="btn light-blue darken-4" type="submit" name="buscarViaje" id="btnBuscarViaje">
                   Buscar viaje
                 </button>
               </div>
@@ -110,7 +110,7 @@
 
 
   <script>
-    var seleccion = document.getElementById('selectOrigen');
+  /*  var seleccion = document.getElementById('selectOrigen');
 
     var botonEnviar = document.getElementById('btnBuscarViaje');
     botonEnviar.onclick = pasarjAax;
@@ -130,7 +130,7 @@
       }).always(function() {
         console.log("complete");
       });
-    }
+    }*/
   </script>
 
   <script type="text/javascript" src="js/inicializaciones.js"></script>
